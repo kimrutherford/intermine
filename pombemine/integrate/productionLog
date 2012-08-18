@@ -1,0 +1,1 @@
+EXECUTE	optimise: 68	estimated: 291	execute: 1	permitted: 55	convert: 97	SELECT DISTINCT a1_ FROM org.intermine.model.bio.Organism AS a1_	SELECT a1_.id AS a1_id FROM Organism AS a1_ ORDER BY a1_.id LIMIT 1000

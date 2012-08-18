@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:project type="bio" xsi:schemaLocation="http://flymine.org/project/1.0 http://www.flymine.org/download/schemas/project.xsd" xmlns:ns2="http://intermine.org/project/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <property name="target.model" value="genomic"/>
+    <property location="../bio/sources/" name="source.location"/>
+    <property name="common.os.prefix" value="common"/>
+    <property name="intermine.properties.file" value="pombemine.properties"/>
+    <property location="../default.intermine.integrate.properties" name="default.intermine.properties.file"/>
+    <sources>
+        <source dump="false" name="chado-db" type="chado-db">
+            <property name="source.db.name" value="pombe-chado"/>
+            <property name="genus" value="Schizosaccharomyces"/>
+            <property name="species" value="pombe"/>
+            <property name="taxonId" value="4896"/>
+            <property name="dataSourceName" value="pombe-chado"/>
+            <property name="dataSetTitle" value="Pombe Genome"/>
+            <property name="processors" value=""/>
+        </source>
+        <source dump="true" name="entrez-organism" type="entrez-organism">
+            <property name="src.data.file" value="build/organism.xml"/>
+        </source>
+        <source dump="false" name="go" type="go">
+            <property location="FIXME" name="src.data.file"/>
+        </source>
+        <source dump="false" name="go-annotation" type="go-annotation">
+            <property location="FIXME" name="ontologyfile"/>
+            <property location="FIXME" name="src.data.dir"/>
+        </source>
+<!--
+        <source dump="false" name="intact" type="intact">
+            <property name="intact.organisms" value="4896"/>
+            <property location="FIXME" name="src.data.dir"/>
+        </source>
+-->
+        <source dump="false" name="interpro" type="interpro">
+            <property location="FIXME" name="src.data.dir"/>
+        </source>
+        <source dump="false" name="kegg-pathway" type="kegg-pathway">
+            <property name="kegg.organisms" value="FIXME"/>
+            <property location="FIXME" name="src.data.dir"/>
+        </source>
+<!--
+        <source dump="false" name="pubmed" type="pubmed">
+            <property name="pubmed.organisms" value="4896"/>
+            <property location="FIXME" name="src.data.dir"/>
+            <property name="src.data.dir.includes" value="FIXME"/>
+        </source>
+-->
+        <source dump="false" name="treefam" type="treefam">
+            <property location="FIXME" name="src.data.dir"/>
+            <property name="src.data.dir.includes" value="FIXME"/>
+            <property location="FIXME" name="geneFile"/>
+            <property name="treefam.organisms" value="4896"/>
+            <property name="treefam.homologues" value="FIXME"/>
+        </source>
+        <source dump="false" name="so" type="so"/>
+        <source dump="false" name="uniprot-keywords" type="uniprot-keywords">
+            <property location="FIXME" name="src.data.dir"/>
+            <property name="src.data.dir.includes" value="FIXME"/>
+        </source>
+        <source dump="false" name="update-publications" type="update-publications">
+            <property name="src.data.file" value="build/organism.xml"/>
+        </source>
+    </sources>
+    <post-processing/>
+</ns2:project>

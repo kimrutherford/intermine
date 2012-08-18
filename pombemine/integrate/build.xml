@@ -1,0 +1,11 @@
+
+<project name="pombemine-integration" default="default" basedir=".">
+  <description>perform integration</description>
+  
+  <!-- To load just one data source, run "ant -Dsource=<whatever>" -->
+  <!-- To empty the production database, go to pombemine/dbmodel, and type "ant clean" and then "ant build-db" -->
+
+  <import file="../../imbuild/integrate.xml"/>
+
+</project>
+
